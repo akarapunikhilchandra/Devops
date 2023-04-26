@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fb-deploy
+    app: tomcat
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: tomcat
+    template:
+      metadata:
+        name:
+          app: tomcat
